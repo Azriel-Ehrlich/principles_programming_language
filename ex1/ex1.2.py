@@ -12,11 +12,7 @@ def sum_digit(n):
 
 def main():
    s = input("enter number: ")
-   try:
-        n = int(s)
-   except ValueError:
-        n = s  
-   print(sum_digit(n))
+   print(sum_digit(s))
 
 if __name__ == "__main__":
    main()
