@@ -2,13 +2,13 @@ from functools import reduce
 
 
 # ------------------- part a ---------------------------
+# returns a lambda function that raises its input to the given exponent
 def power_function(exp):
-    """returns a function f(x) = x**exp"""
     return lambda x: x ** exp
 
 # ------------------- part b ---------------------------
+# returns a map object that generates power functions for exponents 0 to n-1
 def make_power_funcs(n: int):
-    """returns a map object of functions f(x) = x**i for i in 0..n-1"""
     return map(power_function, range(n))
 
 # # --- main script ---
@@ -24,7 +24,6 @@ def make_power_funcs(n: int):
 # ------------------- part c ---------------------------
 # Taylor approximation of e^x up to degree n
 def taylor_exp(x, n):
-    """returns the Taylor series approximation of e^x up to degree n"""
     # generate power functions for degrees 0 to n-1
     power_funcs = make_power_funcs(n)
     
@@ -36,5 +35,5 @@ def taylor_exp(x, n):
     
     return reduce(lambda a, b: a + b, terms)
 # Example usage
-approx = taylor_exp(1, 10) 
-print(f"Taylor approximation of e^1 up to degree 10: {approx}")
+approx = taylor_exp(2, 10) 
+print(f"Taylor approximation of e^2 up to degree 10: {approx}")

@@ -5,7 +5,6 @@ from functools import reduce
 nums = list(range(1, 1001))
 evens = list(filter(lambda x: x % 2 == 0, nums))
 odds  = list(filter(lambda x: x % 2 == 1, nums))
-
 # lambda for list of cummulative product for list
 cum_prod = lambda ls,size: list(map(
     lambda x: reduce (lambda a, b: a * b, ls[:x+1]), range(size)
@@ -19,7 +18,7 @@ transform_sum = lambda ls: list(map(
 
 # ------------- part b -----------
 # for the even list compute the cummulative product of part of it
-even_cumprod = cum_prod(evens[:100],10)
+even_cumprod = cum_prod(evens,30)
 # for the odd list compute the transform_sum of part of it
 odd_transformed = transform_sum(odds[:10])
 
