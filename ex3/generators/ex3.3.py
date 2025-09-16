@@ -21,10 +21,8 @@ def main():
         return
 
     gen = exp_taylor_sums(x)
-    s_n = None
     for _ in range(n + 1):      
-        s_n = next(gen)
-        print(s_n)
+        print(next(gen))
 
 
 
