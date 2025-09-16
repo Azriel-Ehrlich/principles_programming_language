@@ -13,7 +13,7 @@ cum_prod = lambda ls,size: list(map(
 # lambda for list of x/2+2+next element for list where x is
 # the sum until the current element
 transform_sum = lambda ls: list(map(
-    lambda x: x/2 + 2 + (ls[x+1] if x+1 < len(ls) else 0), range(len(ls))
+    lambda x: ls[x]/2 + 2 + (ls[x+1] if x+1 < len(ls) else 0), range(len(ls))
     ))
 
 # ------------- part b -----------
